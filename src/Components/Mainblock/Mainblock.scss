@@ -4,8 +4,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
+@mixin default-theme() {
+    --background-color: $main-background-color;
+    --text-color: $main-text-color
+}
+
+@mixin color-theme() {
+    --backgrond-color: rgb(32, 71, 41);
+    --text-color: rgb(17, 17, 17);
+}
+
+
 html,
 body {
+    @include color-theme();
+    &.is_inverted {
+        @include default-theme()
+    }
+    @media (prefers-color-scheme: default) {
+        @include default-theme();
+        &.is_inverted {
+            @include color-theme()
+        }
+    }
     width: 100vw;
     height: 100vh;
     background-color: $main-background-color;
@@ -38,7 +60,7 @@ p {
     margin: 0;
 
     &__top {
-        height: 30%;
+        height: 23%;
         width: 100%;
         color: $main-text-color;
         display: flex;
@@ -66,16 +88,16 @@ p {
     }
 
     &__blurb {
-        width: 48%;
-        font-size: 1.4rem;
+        width: 38%;
+        font-size: 1rem;
         padding-left: 1rem;
         border-left: 1px solid $main-text-color;
         letter-spacing: .5px;
     }
     &__contact {
         width: 40%;
-        font-size: 1.2rem;
-        margin-left: 3rem;
+        font-size: 1rem;
+        margin-left: 5rem;
         padding-left: 1rem;
         border-left: 1px solid $main-text-color;
     }
@@ -86,10 +108,11 @@ p {
 
     &__title {
         color: $main-text-color;
-        font-size: 12rem;
+        opacity: .9;
+        font-size: 13rem;
         font-weight: 900;
         margin-top: 0;
-        padding-top: 6rem;
+        padding-top: 7rem;
         padding-left: 1rem;
         letter-spacing: .5rem;
     }

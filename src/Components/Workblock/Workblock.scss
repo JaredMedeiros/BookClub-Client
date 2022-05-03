@@ -1,0 +1,112 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/type' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+ 
+    &__section-title {
+        color: $main-text-color;
+        margin: 2rem;
+        padding-left: 10rem;
+        font-size: 4rem;
+        letter-spacing: 4px;
+        width: 100%;
+        text-align: left;
+    }
+
+    &__accordian {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 50%;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    &__accordian::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__title {
+        color: $main-text-color;
+        width: 70%;
+        padding-left: 1rem;
+    }
+
+    &__date {
+        color: $main-text-color;
+    }
+
+
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: all -.5s cubic-bezier(0,1,0,1);
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__content-show {
+        height: auto;
+        max-height: 9999px;
+        transition: all -.5s cubic-bezier(1,0,1,0);
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__build {
+        color: $main-text-color;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        width: 30%;
+        letter-spacing: .7px;
+        line-height: 1.5rem;
+    }
+
+    &__item {
+        border-top: 1px solid $main-text-color;
+        width: 90vw;
+        padding: .35rem;
+        cursor: pointer;
+
+        &--last {
+            border-top: 1px solid $main-text-color;
+            width: 100vw;
+            border-bottom: 1px solid $main-text-color;
+            width: 90vw;
+            padding: .35rem;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.image {
+    width: 30%;
+}
