@@ -15,7 +15,7 @@ export default function Mainblock() {
                     <p>BOOKCLUB.studio is a web and software development collective with a focus on bold, simplistic UI, and accessible, scalable architecture. Creative + intuitive execution from ideation to launch.</p>
                 </div>
                 <div className = 'mainblock__contact'>
-                    <p>Inquiries:<br/>bookclubstudio@gmail.com</p>
+                    <p>Inquiries:<br/>jaredpmedeiros@gmail.com</p>
                     <p>Conversation:<br/>469.400.8422</p>
                 </div>
             </div>

@@ -58,6 +58,7 @@ p {
     height: 100vh;
     background-color: $main-background-color;
     margin: 0;
+    scroll-snap-align: start; 
 
     &__top {
         height: 23%;
