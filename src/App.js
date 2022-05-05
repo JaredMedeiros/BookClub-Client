@@ -10,10 +10,10 @@ function App() {
   return (
   <div className = 'main'>
   <Mainblock className = 'section'/>
+  <GridWave />
   <Workblock className = 'section'/>
   <LogoAnimation />
   <Contactblock className = 'section'/>
-  {/* <GridWave /> */}
   </div>
   )     
 }

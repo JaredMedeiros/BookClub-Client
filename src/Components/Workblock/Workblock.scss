@@ -31,11 +31,15 @@ h3 {
     &__section-title {
         color: $main-text-color;
         margin: 2rem;
-        padding-left: 6rem;
+        padding-left: 2rem;
         font-size: 4rem;
         letter-spacing: 4px;
         width: 100%;
         text-align: left;
+
+        @include tablet {
+            padding-left: 6rem;
+        }
     }
 
     &__accordian {
@@ -61,9 +65,15 @@ h3 {
     }
 
     &__title {
+        font-size: 1rem;
         color: $main-text-color;
-        width: 70%;
+        width: 80%;
         padding-left: 1rem;
+
+        @include tablet {
+            font-size: 1.5rem;
+            width: 70%;
+        }
     }
 
     &__date {
@@ -92,12 +102,17 @@ h3 {
 
     &__build {
         color: $main-text-color;
+        margin-left: 0;
         padding-top: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        width: 30%;
+        width: 70%;
         letter-spacing: .7px;
         line-height: 1.5rem;
+
+        @include tablet {
+            width: 30%;
+        }
     }
 
     &__images {
@@ -136,9 +151,13 @@ h3 {
 }
 
 .image {
-    max-height: 15rem;
-    max-width: 25rem;
+    max-height: 8rem;
+    max-width: 18rem;
     margin: 1rem;
-    border: .5px solid white
-  
+    border: .5px solid white;
+
+    @include tablet {
+        max-height: 15rem;
+    max-width: 25rem;
+    }
 }

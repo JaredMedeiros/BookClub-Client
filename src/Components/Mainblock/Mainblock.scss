@@ -39,14 +39,18 @@ body {
 li {
     text-decoration: none;
     list-style: none;
-    padding-right: 1rem;
+    padding-right: .5rem;
+
+    @include tablet {
+        padding-right: 1rem;
+    }
 }
 
 ul {
     display: flex;
     flex-direction: row;
     padding-left: 1rem;
-    margin-top: 1rem;
+    margin: 1rem 0 0 0;
 }
 
 p {
@@ -61,60 +65,118 @@ p {
     scroll-snap-align: start; 
 
     &__top {
-        height: 23%;
+
         width: 100%;
         color: $main-text-color;
         display: flex;
         flex-direction: row;
+        height: 50%;
+
+        @include tablet {
+            height: 30%;
+
+        }
+
+        @include desktop {
+            height: 20%;
+        }
     }
 
-    &__info {
-        display: flex;
-        flex-direction: row;
-    }
 
     &__tabs {
         text-decoration: none;
         list-style: none;
-        width: 55%;
+        width: 32%;
         display: flex;
         flex-direction: row;
-        font-size: 1.4rem;
-        letter-spacing: .5px;
+        font-size: 1.3rem;
+        letter-spacing: 0px;
+        text-align: left;
+        margin: 0;
+
+        @include tablet {
+            width: 38%;
+            font-size: 2rem;
+            letter-spacing: .5px;
+        }
+
+        @include desktop {
+            width: 45%;
+        }
     }
 
     &__info {
-        width: 45%;
-        padding-right: 6rem;
+        width: 55%;
+        padding-right: .25rem;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            padding-right: 6rem;
+        }
     }
 
     &__blurb {
-        width: 38%;
-        font-size: 1rem;
-        padding-left: 1rem;
+        width: 90%;
+        font-size: 1.2rem;
+        padding-left: .25rem;
         border-left: 1px solid $main-text-color;
         letter-spacing: .5px;
+        margin-left: 1rem;
+
+        @include tablet {
+            font-size: 1.3rem;
+            width: 58%;
+            margin-left: 2rem;
+            padding-left: 1rem;
+        }
     }
     &__contact {
-        width: 40%;
-        font-size: 1rem;
-        margin-left: 5rem;
-        padding-left: 1rem;
+        width: 70%;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        padding-left: .25rem;
+        padding-top: 1rem;
         border-left: 1px solid $main-text-color;
+        overflow-wrap: break-word;
+
+        @include tablet {
+            font-size: 1.3rem;
+            width: 30%;
+            padding-top: 0;
+            padding-left: 1rem;
+            overflow-wrap: normal;
+        }
     }
 
     &__bottom {
         width: 100vw;
+
     }
 
     &__title {
+
         color: $main-text-color;
         opacity: .9;
-        font-size: 13rem;
-        font-weight: 900;
-        margin-top: 0;
-        padding-top: 7rem;
         padding-left: 1rem;
-        letter-spacing: .5rem;
+        font-size: 4.5rem;
+        padding-top: 9rem;
+        line-height: 4.5rem;
+
+        @include tablet {
+            font-size: 9rem;
+            margin-top: 10rem;
+            line-height: 10rem;
+            
+
+        }
+        @include desktop {
+            font-size: 13rem;
+            font-weight: 900;
+            margin-top: 0;
+            letter-spacing: .5rem;
+            line-height: 14rem;
+        }
     }
 }    

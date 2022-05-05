@@ -6,6 +6,7 @@ html,
 body {
     height:100vh;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 .main {
@@ -13,6 +14,7 @@ body {
     overflow-y: scroll;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
+    overflow-x: hidden;
 }
 
 .section {
