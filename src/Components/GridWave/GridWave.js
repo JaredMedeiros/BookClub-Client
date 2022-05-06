@@ -1,9 +1,4 @@
 import './GridWave.scss'
-import Helmet from 'react-helmet'
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js'
-import SimplexNoise from 'https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js'
-import jQuery from 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
-import $ from 'three'
 
 
 export default function GridWave() {
