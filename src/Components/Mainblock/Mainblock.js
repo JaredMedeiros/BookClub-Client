@@ -1,7 +1,9 @@
 import './Mainblock.scss'
+import Tabs from '../Tabs/Tabs'
 
 export default function Mainblock() {
     return(
+
     <main className = 'mainblock'>
         <section className = 'mainblock__top'>
             <div className = 'mainblock__tabs'>
@@ -22,6 +24,13 @@ export default function Mainblock() {
         </section>
         <section className = 'mainblock__bottom'>
             <h1 className = 'mainblock__title'>BOOKCLUB<br/>.studio</h1>
+            <span className="mouse_scroll">
+		        <span>
+			        <span class="m_scroll_arrows unu"></span>
+			        <span class="m_scroll_arrows doi"></span>
+			        <span class="m_scroll_arrows trei"></span>
+		        </span>
+            </span>
         </section>
     </main>
     )

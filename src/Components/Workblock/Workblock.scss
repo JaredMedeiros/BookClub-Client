@@ -36,9 +36,11 @@ h3 {
         letter-spacing: 4px;
         width: 100%;
         text-align: left;
+        margin-top: 7rem;
 
         @include tablet {
             padding-left: 6rem;
+            margin-top: 10rem;
         }
     }
 

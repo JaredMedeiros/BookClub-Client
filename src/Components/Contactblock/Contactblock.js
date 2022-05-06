@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com'
 import React, { useState, useEffect } from 'react'
 
 
-export default function Contactblock() {
+const Contactblock = React.forwardRef(({},myref) => {
 
     function sendEmail(e){
 
@@ -34,7 +34,7 @@ export default function Contactblock() {
 
 
     return (
-        <div className = 'contact'>
+        <div ref={ myref }className = 'contact' id='contact'>
             <h1 className = 'contact__title'>Reach out.</h1>
             <form className = 'contact__form' onSubmit = {sendEmail}>
                 <input type = 'text' className = 'contact__name' placeholder = 'name' name = 'from_name' />
@@ -44,4 +44,6 @@ export default function Contactblock() {
             </form>
         </div>
     )
-}
+})
+
+export default Contactblock;

@@ -3,17 +3,37 @@ import Workblock from './Components/Workblock/Workblock'
 import Contactblock from './Components/Contactblock/Contactblock'
 import LogoAnimation from './Components/LogoAnimation/LogoAnimation'
 import GridWave from './Components/GridWave/GridWave'
+import Tabs from './Components/Tabs/Tabs'
 import './App.scss'
+import {BrowserRouter as Router} from 'react-router-dom'
+import React, { useRef } from 'react' 
 
 
 function App() {
+
+  const workOnClickRef = useRef(null);
+  const contactOnClickRef = useRef(null);
+
+  const scrollEffect = ( targetRef ) => {
+    targetRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+
   return (
   <div className = 'main'>
-  <Mainblock className = 'section'/>
-  <GridWave />
-  <Workblock className = 'section'/>
-  <LogoAnimation />
-  <Contactblock className = 'section'/>
+    <div className = 'tabs'>
+            <ul>
+                <li onClick = { () => scrollEffect(workOnClickRef)}><i>work, </i></li>
+                <li onClick = { () => scrollEffect(contactOnClickRef)}>contact</li>
+            </ul>
+        </div>  
+    <Mainblock />
+    <GridWave />
+    <Workblock ref = { workOnClickRef }/>
+    <LogoAnimation />
+    <Contactblock ref = { contactOnClickRef } />
   </div>
   )     
 }

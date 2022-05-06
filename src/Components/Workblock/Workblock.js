@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './Workblock.scss'
+import React from 'react'
 
-
-export default function Workblock() {
+const Workblock = React.forwardRef(({},myref) => {
 
     const [selected, setSelected] = useState(null)
 
@@ -86,7 +86,7 @@ export default function Workblock() {
     console.log(projectData[4].projectPhotos[0].image1)
 
     return (
-        <main className = 'projects'>
+        <main ref={ myref } className = 'projects' id='work'> 
             <h1 className = 'projects__section-title'>Work.</h1>
             <div className = 'projects__accordian'>
 
@@ -110,4 +110,6 @@ export default function Workblock() {
             </div>
         </main>
     )
-}
+})
+
+export default Workblock;
