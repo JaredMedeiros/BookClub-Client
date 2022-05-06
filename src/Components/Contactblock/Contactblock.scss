@@ -43,7 +43,7 @@ html {
         border: 1px solid white;
         box-shadow: none;
         padding: .5rem;
-        margin: 6rem 1rem .5rem 1rem;
+        margin: 3rem 1rem .5rem 1rem;
 
         @include tablet {
             width: 28rem;
@@ -95,8 +95,9 @@ html {
     &__button {
         width: 10rem;
         height: 3rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
         cursor: pointer;
         margin: 1rem;
+        border-radius: 1px;
     }
 }
