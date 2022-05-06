@@ -5,6 +5,7 @@ import LogoAnimation from './Components/LogoAnimation/LogoAnimation'
 import GridWave from './Components/GridWave/GridWave'
 import './App.scss'
 import React, { useRef } from 'react' 
+import Helmet from 'react-helmet'
 
 
 function App() {
@@ -20,7 +21,14 @@ function App() {
   }
 
   return (
+    
   <div className = 'main'>
+  <Helmet>
+                <meta charSet="utf-8" />
+                <title>BOOKCLUB.studio</title>
+                <link rel="canonical" href="https://bookclub.studio/" />
+                <meta name="description" content="BookClub Studio web and software development site" />
+  </Helmet>  
     <div className = 'tabs'>
             <ul>
                 <li onClick = { () => scrollEffect(workOnClickRef)}><i>work, </i></li>
