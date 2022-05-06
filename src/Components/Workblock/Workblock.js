@@ -24,7 +24,7 @@ const Workblock = React.forwardRef((props,myref) => {
                 {image3:"/images/fllc/Screen Shot 2022-05-02 at 20.16.01.png"},
             ],
             projectDate: "2020",
-            projectLink: ''
+            projectLink: 'https://fairelamourlit.com/'
         },
         {
             projectTitle: "TalkBack",
@@ -35,7 +35,7 @@ const Workblock = React.forwardRef((props,myref) => {
                 {image3:"/images/talkback/Screen Shot 2022-05-02 at 20.28.32.png"},
             ],
             projectDate: "2022",
-            projectLink: ''
+            projectLink: 'https://github.com/JaredMedeiros/Hackathon1'
         },
         {
             projectTitle: "RoseHips Band Site",
@@ -46,7 +46,7 @@ const Workblock = React.forwardRef((props,myref) => {
                 {image3:"/images/rosehips/Untitled design.png"},
             ],
             projectDate: "2022",
-            projectLink: ''
+            projectLink: 'https://rosehipsband.com/'
         },
         {
             projectTitle: "Shopify Hackathon",
@@ -57,7 +57,7 @@ const Workblock = React.forwardRef((props,myref) => {
                 {image3:"/images/shopify/Screen Shot 2022-05-02 at 20.19.31.png"},
             ],
             projectDate: "2022",
-            projectLink: ''
+            projectLink: 'https://github.com/angrajlatake/shopify-project'
         },
         {
             projectTitle: "Astrum",
@@ -68,7 +68,7 @@ const Workblock = React.forwardRef((props,myref) => {
                 {image3:"/images/astrum/Screen Shot 2022-04-06 at 22.26.04.png"},
             ],
             projectDate: "2022",
-            projectLink: ''
+            projectLink: 'https://github.com/JaredMedeiros/Astrum'
         },
         {
             projectTitle: "WorkBlock",
@@ -79,7 +79,7 @@ const Workblock = React.forwardRef((props,myref) => {
                 {image3:"/images/workblock/Screen Shot 2022-05-02 at 20.25.34.png"},
             ],
             projectDate: "2022",
-            projectLink: ''
+            projectLink: 'https://workblock.netlify.app/'
         },
     ]
 
@@ -97,7 +97,7 @@ const Workblock = React.forwardRef((props,myref) => {
                         <h3 className = 'projects__date'>{item.projectDate}</h3>
                     </div> 
                     <div className = { selected === i ? 'projects__content-show' : 'projects__content'}>
-                        <p className = 'projects__build'>Build:  {item.projectStack}</p>
+                        <a href = {item.projectLink} rel="noopener noreferrer" target="_blank"><p className = 'projects__build'>Build:  {item.projectStack}</p></a>
                         <div className = 'projects__images'>
                             <img className = 'image' src = {item.projectPhotos[0].image1} alt =""/>
                             <img className = 'image' src = {item.projectPhotos[1].image2} alt =""/>
