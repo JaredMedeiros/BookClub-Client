@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com'
 import React, { useState, useEffect } from 'react'
 
 
-const Contactblock = React.forwardRef(({},myref) => {
+const Contactblock = React.forwardRef((props,myref) => {
 
     function sendEmail(e){
 

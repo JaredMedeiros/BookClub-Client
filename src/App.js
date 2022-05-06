@@ -3,9 +3,7 @@ import Workblock from './Components/Workblock/Workblock'
 import Contactblock from './Components/Contactblock/Contactblock'
 import LogoAnimation from './Components/LogoAnimation/LogoAnimation'
 import GridWave from './Components/GridWave/GridWave'
-import Tabs from './Components/Tabs/Tabs'
 import './App.scss'
-import {BrowserRouter as Router} from 'react-router-dom'
 import React, { useRef } from 'react' 
 
 

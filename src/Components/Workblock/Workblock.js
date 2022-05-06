@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './Workblock.scss'
 import React from 'react'
 
-const Workblock = React.forwardRef(({},myref) => {
+const Workblock = React.forwardRef((props,myref) => {
 
     const [selected, setSelected] = useState(null)
 
@@ -99,9 +99,9 @@ const Workblock = React.forwardRef(({},myref) => {
                     <div className = { selected === i ? 'projects__content-show' : 'projects__content'}>
                         <p className = 'projects__build'>Build:  {item.projectStack}</p>
                         <div className = 'projects__images'>
-                            <img className = 'image' src = {item.projectPhotos[0].image1} />
-                            <img className = 'image' src = {item.projectPhotos[1].image2} />
-                            <img className = 'image' src = {item.projectPhotos[2].image3} />
+                            <img className = 'image' src = {item.projectPhotos[0].image1} alt =""/>
+                            <img className = 'image' src = {item.projectPhotos[1].image2} alt =""/>
+                            <img className = 'image' src = {item.projectPhotos[2].image3} alt =""/>
                         </div>
                     </div>
                     </div>

@@ -1,5 +1,4 @@
 import './Mainblock.scss'
-import Tabs from '../Tabs/Tabs'
 
 export default function Mainblock() {
     return(
@@ -8,8 +7,8 @@ export default function Mainblock() {
         <section className = 'mainblock__top'>
             <div className = 'mainblock__tabs'>
                 <ul>
-                    <a><li><i>work, </i></li></a>
-                    <a><li>contact</li></a>
+                    <li><i>work, </i></li>
+                    <li>contact</li>
                 </ul>
             </div>
             <div className = 'mainblock__info'>
