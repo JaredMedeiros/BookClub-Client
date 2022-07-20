@@ -61,7 +61,7 @@ p {
     width: 100vw;
     height: 100vh;
     background-color: $main-background-color;
-    margin: 0;
+    margin: 0 0 1rem 0;
     scroll-snap-align: start; 
 
     &__top {
@@ -78,7 +78,7 @@ p {
         }
 
         @include desktop {
-            height: 20%;
+            height: 22%;
         }
     }
 
@@ -115,6 +115,7 @@ p {
         @include tablet {
             flex-direction: row;
             padding-right: 6rem;
+            height: 100%;
         }
     }
 
@@ -155,6 +156,10 @@ p {
         width: 100vw;
         position: relative;
 
+        @include desktop {
+          height: 75%;
+        }
+
     }
 
     &__title {
@@ -168,7 +173,7 @@ p {
 
         @include tablet {
             font-size: 9rem;
-            margin-top: 10rem;
+            margin-top: 6rem;
             line-height: 10rem;
             
 
@@ -190,16 +195,21 @@ p {
   
   
   .mouse_scroll {
-    //   display: block;
-      position: absolute;
-      bottom: -2.5rem;
-      right: .5rem;
-      margin: 0 auto;
-      width: 24px;
-      height: 100px;
-      margin-right: 1rem;
-      margin-top: 4rem;
-    //   margin-top: 125px;
+
+    display: none;
+
+    @include tablet {
+      //   display: block;
+        position: absolute;
+        bottom: -2.5rem;
+        right: .5rem;
+        margin: 0 auto;
+        width: 24px;
+        height: 100px;
+        margin-right: 1rem;
+        margin-top: 4rem;
+      //   margin-top: 125px;
+    }
   }
   
   
